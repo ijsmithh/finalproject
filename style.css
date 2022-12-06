@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt');
+
+h1 {
+    font-family: 'Prompt', sans-serif;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.intro p {
+    font-family: 'Prompt', sans-serif;
+    font-style: italic;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding: 25px 25px 0px 0px;
+}
+
+footer {
+    background-color: #aa815f;
+    padding: 32px 12px 32px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Prompt', sans-serif;
+    color: black;
+    word-spacing: 2px;
+}
+
+nav li {
+    padding: 20px;
+}
+
+.nav_links {
+    font-family: 'Prompt', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    background-color: #faab00;
+}
+nav a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.active {
+    text-transform: uppercase; 
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+a.skip {
+    background: white;
+    padding: 6px;
+    -webkit-transition: top 2s ease-out;
+    transition: left 2s ease-in;
+    z-index: 1;
+    left: -500px;
+    position: absolute;
+  }
+
+
+.intro {
+    background-image: url(../images/header.jpg);
+    background-color: black;
+    min-height: 310px;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.welcome {
+    font-family: 'Prompt', sans-serif;
+    font-size: 25px;
+    padding: 40px 40px;
+    line-height: 1.5;
+}
+
+.welcome h2 {
+    font-size: 30px;
+    font-family: 'Prompt', sans-serif;
+    padding: none;
+}
+
+.welcome p {
+    padding: 0px 0px 0px 50px;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Prompt', sans-serif;
+    padding: 0px 0px 10px 40px;
+}
+
+.gallery {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #faab00;
+}
+
+.gallery {
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s;
+    -moz-animation: fadeIn 4s;
+    -o-animation: fadeIn 4s;
+    -ms-animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+
+    100% {opacity:1;}
+  }
+
+.gallery_content {
+    position: relative;
+}
+
+.gallery_text {
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    border: 3px double;
+    font-size: 25px;
+    text-align: center;
+}
+
+.gallery_text:hover {
+    opacity: 1;
+    background-color: #faab00;opacity:0.9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    margin: 15px;
+    width: 300px;
+    border-radius: 7px;
+}
+
+img:hover {
+    filter: grayscale();
+}
+
+.page_gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.page_gallery .flex_card {
+    position: relative;
+    max-width: 450px;
+    background: #bbbc5e;
+    margin: 10px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page_gallery .flex_card .flex_image {
+    max-width: 250px;
+    align-self: center;
+    position: relative;
+    margin-left: 15px;
+    padding: 15px;
+}
+
+.page_gallery .flex_card .flex_image img {
+    max-width: 100%;
+    margin: none;
+    padding: none;
+    object-fit: cover;
+}
+
+.page_gallery .flex_card .flex_content {
+    margin-left: 15px;
+    font-family: 'Prompt', sans-serif;
+    color: black;
+    font-size: 17px;
+    padding: 15px;
+} 
+
+.recommended_shops {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.bigcontainer,.whyicare,.contact_container h2 {
+    text-align: center;
+    padding: 20px 20px;
+}
+.bigcontainer p{
+    font-family: 'Prompt', sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.bigcontainer a{
+    font-family: 'Prompt', sans-serif;
+    padding: 50px;
+    text-align: match-parent;
+    line-height: 2;
+    font-size: 20px;
+}
+
+.recommended_shops,.whyicare,.contact_container {
+    border: 5px double #faab00;
+}
+
+.flip_card {
+    position: relative;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    display: flex;
+    flex-direction: row;
+  }
+
+#flip_card h2 {
+    padding-right: 20px;
+}
+
+.cardcontent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip_card:hover .cardcontent {
+    transform: rotateY(180deg);
+}
+
+.flip_card:focus .cardcontent {
+    transform: rotateY(180deg);
+}
+
+.cardfront, .cardback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.cardfront {
+    color: black;
+}
+
+.cardback {
+    background-color: #cdb9b3;
+    color: black;
+    font-family: 'Prompt', sans-serif;
+    font-size: 18px;
+    transform: rotateY(180deg);
+    padding: 40px 20px;
+    text-align: center;
+    align-self: center;
+}
+
+form {
+    justify-items: center;
+}
+
+.form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-items: center;
+    font-family: 'Prompt', sans-serif;
+}
+
+fieldset {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entry {
+    border: solid black 1px;
+    margin: 15px auto;
+    font-family: 'Prompt', sans-serif;
+    text-align: left; 
+    border-radius: 1px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+  
+.done{
+    border-radius: 1px;
+    font-size: 20;
+    padding: 15px;
+    text-transform: capitalize;
+    width: 150px;
+    font-family: 'Prompt', sans-serif;
+    color: black;
+    background-color: #faab00;
+    text-align: center;
+    justify-content: center;
+}
+
+button:hover {
+    animation: effect 0.4s infinite;
+}
+
+.contact_container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.whyicare {
+    padding-top: 25px;
+    padding-bottom: 55px;
+}
+
+.shoprecs {
+    padding-top: 25px;
+    padding-bottom: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shoprecs p {
+    font-family: 'Prompt', sans-serif;
+    color: black;
+    font-size: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+  
+  .show {display: block;}
+
+    @keyframes effect {
+        0% {
+            transform: translateX(0px) rotate(0deg);
+        }
+  
+        25% {
+            transform: translateX(-4px) rotate(-4deg);
+        }
+  
+        45% {
+            transform: translateX(-2px) rotate(-2deg);
+        }
+  
+        65% {
+            transform: translateX(4px) rotate(4deg);
+        }
+  
+        85% {
+            transform: translateX(2px) rotate(2deg);
+        }
+  
+        100% {
+            transform: translateX(0px) rotate(0deg);
+        }
+    }
+    .page_gallery h2 {
+        padding: 0px;
+    }
+
+@media screen and (min-width: 600px) {
+    .nav_links {
+        background-color: #aa815f;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .active {
+        text-decoration: underline;
+    }
+
+    .welcome {
+        font-size: 20px;
+        padding: 80px 80px;
+    }
+    
+    .welcome h2 {
+        font-size: 30px;
+        padding: 0px;
+    }
+    
+    .learnmore {
+        font-size: 20px;
+        font-family: 'Prompt', sans-serif;
+        padding: 0px 120px 40px 120px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 30px;
+        padding: 0px 0px 0px 80px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        overflow: scroll;
+    }
+
+    .page_gallery {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .page_gallery .flex_card {
+        background: #bbbc5e;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .page_gallery .flex_card .flex_image {
+        max-width: 250px;
+        flex: 0 0 150px;
+    }
+    
+    .page_gallery .flex_card .flex_image img {
+        max-width: 100%;
+        border-radius: 70px;
+    }
+    
+    .page_gallery .flex_card .flex_content {
+        position: relative;
+        flex-direction: row;
+        margin-left: 15px;
+        font-family: 'Prompt', sans-serif;
+        color: black;
+        font-size: 22px;
+        padding: 20px;
+    }  
+
+}
+
+@media (min-width: 820px){
+    .nav_links {
+        background-color: #faab00;
+        text-align: right;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .active {
+        text-decoration: underline;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #faab00;
+    }
+
+    .page_gallery {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        justify-content: space-evenly;
+    }
+
+    .page_gallery .flex_card {
+        background-color: #bbbc5e;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page_gallery .flex_card .flex_image img {
+        max-width: 100%;
+        border-radius: 7px;
+        
+    }
+
+    .page_gallery .flex_card .flex_content {
+        font-size: 15px;
+    }  
+
+    .flip_card {
+        display: block;
+    }
+
+    .recommended_shops {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (prefers-reduced-motion){
+    .gallery{
+        animation: none;
+    }
+
+    .cardcontent{
+        -webkit-transition: initial;
+        transition: initial; 
+        animation-duration: initial;
+    }
+
+    .intro{
+        background-attachment: initial;
+      }  
+
+    button:hover {
+        animation: none;
+    }
+
+    img:hover {
+        animation: none;
+    }
+
+    .gallery_text:hover {
+        animation: none;
+    }
+    }
